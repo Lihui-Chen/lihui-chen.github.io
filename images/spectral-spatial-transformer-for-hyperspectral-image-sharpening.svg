@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="100%" height="100%" fill="#f3f4f6" rx="8"/>
+  <text x="16" y="40" font-family="Segoe UI, Roboto, Arial" font-size="16" font-weight="700" fill="#0b1720">Spectral-spatial Transformer for Hyperspectral I</text>
+  <text x="16" y="64" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#374151">Placeholder thumbnail</text>
+</svg>

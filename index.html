@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lihui Chen · 学术主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- 导航栏 -->
+  <nav class="top-nav">
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#publications">Publications</a>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <!-- 资料头部：左侧姓名/职称，右侧头像 -->
+    <header class="profile-header">
+      <div class="profile-info">
+        <h1 id="name">姓名</h1>
+        <div id="title" class="title"> Assistant Researcher / Chongqing University / Email：lihuichen@126.com</div>
+      </div>
+      <div class="profile-avatar">
+        <img id="avatar" src="images/avatar.jpg" alt="avatar" onerror="this.style.display='none'">
+      </div>
+    </header>
+
+    <!-- 主内容区（由 content.md 动态渲染） -->
+    <main class="main">
+      <div class="content" id="content">正在加载…</div>
+      <footer class="footer">编辑 <a href="content.md">content.md</a> 即可更新此页面。</footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+  <script>
+    // ========== 加载 content.md 并渲染页面 ==========
+    async function load() {
+      const contentEl = document.getElementById('content');
+      try {
+        // 1. 获取并渲染 Markdown
+        const res = await fetch('content.md?_=' + Date.now());
+        if (!res.ok) throw new Error('Can not load content.md');
+        contentEl.innerHTML = marked.parse(await res.text());
+
+        // 2. 外链在新标签打开
+        contentEl.querySelectorAll('a[href^=http]').forEach(a => a.setAttribute('target', '_blank'));
+
+        // 3. 抽取 H1 → 姓名
+        const h1 = contentEl.querySelector('h1');
+        if (h1) {
+          document.getElementById('name').textContent = h1.textContent.trim();
+          h1.remove();
+        }
+
+        // 4. 为 h2 添加 id 方便锚点跳转
+        contentEl.querySelectorAll('h2').forEach(h => {
+          if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+        });
+
+        // 5. 论文列表 → 卡片网格（缩略图 + 标题 + 作者 + 元信息 + 链接）
+        const pubHeading = [...contentEl.querySelectorAll('h2,h3')].find(h =>
+          /部分论文|论文|papers|paper|publications|publication/i.test(h.textContent));
+        if (pubHeading) {
+          // 收集所有条目（支持 <ul><li> 和 <p> 两种格式）
+          let el = pubHeading.nextElementSibling;
+          const items = [];
+          while (el && !/^H[23]$/.test(el.tagName)) {
+            if ((el.tagName === 'UL' || el.tagName === 'OL') && el.children.length) {
+              el.querySelectorAll('li').forEach(li => items.push(li.innerHTML));
+              const next = el.nextElementSibling; el.remove(); el = next; continue;
+            }
+            if (el.tagName === 'P' && el.textContent.trim()) {
+              items.push(el.innerHTML);
+              const next = el.nextElementSibling; el.remove(); el = next; continue;
+            }
+            el = el.nextElementSibling;
+          }
+
+          if (items.length) {
+            const grid = document.createElement('div');
+            grid.className = 'papers-grid';
+
+            items.forEach(html => {
+              // 解析：引号内为标题，引号前为作者，引号后为元信息 + 链接
+              const m = html.match(/"(.+?)"/);
+              const title = m ? m[1] : '';
+              const before = m ? html.split(m[0])[0] || '' : '';
+              let after = m ? html.split(m[0])[1] || '' : html;
+
+              // 从 after 中分离链接
+              const tmp = document.createElement('div');
+              tmp.innerHTML = after;
+              const anchors = [...tmp.querySelectorAll('a')];
+              anchors.forEach(a => a.remove());
+              const links = anchors.map(a => a.outerHTML);
+              const meta = tmp.textContent.trim().replace(/^,\s*/, '');
+
+              // 构建卡片
+              const card = document.createElement('div');
+              card.className = 'paper-card';
+              card.innerHTML = `
+                <div class="paper-left"><img alt="${title || 'thumb'}"></div>
+                <div class="paper-body">
+                  ${title ? `<div class="paper-title">${title}</div>` : ''}
+                  ${before.trim() ? `<div class="paper-authors">${before}</div>` : ''}
+                  ${meta ? `<div class="paper-meta">${meta}</div>` : ''}
+                </div>
+                ${links.length ? `<div class="paper-links">${links.join(' ')}</div>` : ''}
+              `;
+
+              // 缩略图：slug 由标题生成，依次尝试 PNG/JPG/WebP/SVG
+              const slug = (title || meta || '').toLowerCase()
+                .replace(/[^a-z0-9一-龥]+/g, '-').replace(/(^-|-$)/g, '');
+              const img = card.querySelector('img');
+              if (slug) {
+                const exts = ['.png', '.jpg', '.webp', '.svg'];
+                let i = 0;
+                img.onerror = () => { if (++i < exts.length) img.src = 'images/' + slug + exts[i]; };
+                img.src = 'images/' + slug + exts[i];
+              } else {
+                img.style.display = 'none';
+              }
+
+              grid.appendChild(card);
+            });
+
+            pubHeading.after(grid);
+          }
+        }
+
+        // 6. PDF 链接 → 用 PDF.js 渲染第一页作为缩略图（受 CORS 限制，静默失败）
+        if (window.pdfjsLib) {
+          pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+          document.querySelectorAll('.paper-card').forEach(async card => {
+            const a = card.querySelector('a');
+            if (!a) return;
+            const href = a.getAttribute('href') || '';
+            if (!/\.pdf(\?|$)/i.test(href)) return;
+            const img = card.querySelector('.paper-left img');
+            if (!img) return;
+            try {
+              const res = await fetch(href);
+              if (!res.ok) return;
+              const pdf = await pdfjsLib.getDocument({ data: await res.arrayBuffer() }).promise;
+              const page = await pdf.getPage(1);
+              const vp = page.getViewport({ scale: 1 });
+              const scale = 200 / vp.width;
+              const canvas = Object.assign(document.createElement('canvas'), {
+                width: Math.round(vp.width * scale),
+                height: Math.round(vp.height * scale)
+              });
+              await page.render({ canvasContext: canvas.getContext('2d'), viewport: page.getViewport({ scale }) }).promise;
+              img.src = canvas.toDataURL('image/png');
+            } catch (e) { /* CORS 或网络错误，忽略 */ }
+          });
+        }
+
+      } catch (e) {
+        contentEl.textContent = '加载失败：' + e.message;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>
