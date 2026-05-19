@@ -2,7 +2,8 @@
 
 ## Bios
 
-硕士生导师，四川大学8年制本硕博连读，期间赴意大利国家研究院进行联合培养，导师包括 Gemine Vivone、Jocelyn Chanussot。
+重庆大学（微电子与通信工程学院）硕士生导师，2022年9月于四川大学8年制本硕博连读获得博士学位，导师杨晓敏教授，期间赴意大利国家研究院进行联合培养，导师包括 Gemine Vivone、Jocelyn Chanussot
+
 长期聚焦图像复原、遥感图像处理、多模态图像融合与解译、遥感基础模型研究。
 
 Assistant researcher at Chongqing University. I received my Bachelor's degree in Electronic Information Engineering and Ph.D. degrees in Information and Communication Engineering from Sichuan University. From August 2021 to August 2022, I was a visiting scholar at the Istituto di Metodologie per l'Analisi Ambientale (IMAA-CNR), National Research Council, Italy, under the supervision of Gemine Vivone and Jocelyn Chanussot. My research interests include image fusion, image super-resolution, image restoration, remote sensing image processing, multimodal image fusion and interpretation, and remote sensing foundation models.
