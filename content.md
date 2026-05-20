@@ -32,6 +32,10 @@ Assistant researcher at Chongqing University. I received my Bachelor's degree in
 ## Publications
 
 - S. Wu, **L. Chen**, L. Jian, G. Vivone, K. Xiao and X. Niu, "Modeling Dataset-Level Priors With Learnable Probability Tables for Pansharpening," IEEE Transactions on Geoscience and Remote Sensing, vol. 64, pp. 1-18, 2026. [[Paper]](https://doi.org/10.1109/TGRS.2026.3682270) [[Codes]](https://github.com/ShaowuCh/LPTNet)
+  
+- H. Yu, M. Wan, T. Chen, A. Peng, X. Shen, R. He, **L. Chen**, H. Liu, and X. Zhou, "Multiscale wavelet-based spatial-spectral compression network for hyperspectral image," Engineering Applications of Artificial Intelligence, vol. 164, pp. 113241, 2026. [[Paper]](https://doi.org/10.1016/j.engappai.2025.113241) [[Codes]](https://github.com/YuHang-max/MWCNet)
+
+- R. Ding, Y. Liu, H. Yu, B. Wang, **L. Chen**, H. Liu, D. Zhang, G. Vivone, and X. Zhou, "Bi-SSFormer: An Ultralightweight Binary Spectral-Spatial Transformer for Hyperspectral Image Classification," IEEE Transactions on Geoscience and Remote Sensing, vol. 63, pp. 1-15, 2025. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11180124)
 
 - S. Wu, L. Jian, **L. Chen**, G. Vivone, L. Jing, Y. Xu, X. Niu, "ProtoFormer: Transformer With Learnable Prototype Tokens for Pansharpening," IEEE Transactions on Geoscience and Remote Sensing, vol. 64, pp. 1-16, 2026. [[Paper]](https://doi.org/10.1109/TGRS.2026.3665174) [[Codes]](https://github.com/ShaowuCh/ProtoFormer)
 
@@ -43,23 +47,15 @@ Assistant researcher at Chongqing University. I received my Bachelor's degree in
 
 - **L. Chen**, T. Song, L. Jian, D. Zhang, G. Vivone, and X. Zhou, "High-Fidelity Pansharpening via Trigeminal Pyramid Decoding of CNN-Transformer Encoded Features," IEEE Transactions on Geoscience and Remote Sensing, 2025. [[Paper]](https://ieeexplore.ieee.org/document/11048745) [[Codes]](https://github.com/songvvvv/pansharpening)
 
-- L. Jian, J. Liu, **L. Chen***, D. Zhang, G. Vivone, and X. Zhou, "Feature Interaction and Adaptive Fusion Network With Spectral Modulation for Pansharpening," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 18, pp. 10458-10470, 2025. [[Paper]](https://www.semanticscholar.org/paper/Feature-Interaction-and-Adaptive-Fusion-Network-for-Jian-Liu/98a47c6159c225bd42d398d20f10cb06c34192dd) 
+- L. Jian, J. Liu, **L. Chen***, D. Zhang, G. Vivone, and X. Zhou, "Feature Interaction and Adaptive Fusion Network With Spectral Modulation for Pansharpening," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 18, pp. 10458-10470, 2025. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10947514)
 
 - X. Su, X. Shen, M. Wan, J. Nie, **Chen, L.**, H. Liu, & X. Zhou, "EigenSR: Eigenimage-bridged pre-trained RGB learners for single hyperspectral image super-resolution," AAAI Conference on Artificial Intelligence (AAAI), 2025. (CCF-A) [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/download/32755/34910) [[Codes]](https://github.com/enter-i-username/EigenSR)
 
-- R. Ding, L. Yong, S. Zhao, J. Nie, **Chen, L.**, H. Liu, & X. Zhou, "Progressive fine-to-coarse reconstruction for accurate low-bit post-training quantization in vision transformers," Neural Networks, 107558, 2025. [[Paper]](https://arxiv.org/pdf/2412.14633) 
+- R. Ding, L. Yong, S. Zhao, J. Nie, **Chen, L.**, H. Liu, & X. Zhou, "Progressive fine-to-coarse reconstruction for accurate low-bit post-training quantization in vision transformers," Neural Networks, 107558, 2025. [[Paper]](https://arxiv.org/pdf/2412.14633)
 
-- H. Liu, J. Huang, J. Nie, J. Xie, **Chen, L.**, & X. Zhou, "Density guided and frequency modulation dehazing network for remote sensing images," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [[Paper]](https://www.researchgate.net/publication/390401825_Density_Guided_and_Frequency_Modulation_Dehazing_Network_for_Remote_Sensing_Images) 
+- H. Liu, J. Huang, J. Nie, J. Xie, **Chen, L.**, & X. Zhou, "Density guided and frequency modulation dehazing network for remote sensing images," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10946836)
 
-- X. Su, X. Shen, H. Liu, **Chen, L.**, G. Vivone, & X. Zhou, "Toward model-independent separative training for deep hyperspectral anomaly detection with mask guidance," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11039663) 
-
-- X. Zhou, Q. Song, J. Nie, Y. Feng, H. Liu, F. Liang, **Chen, L.**, & J. Xie, "Hybrid cross-modality fusion network for medical image segmentation with contrastive learning," Engineering Applications of Artificial Intelligence, 144, 110073, 2025. [[Paper]](https://www.sciencedirect.com/science/article/pii/S0952197625000739) 
-
-- X. Zhou, Q. Song, J. Nie, Y. Feng, H. Liu, F. Liang, **Chen, L.**, & J. Xie, "Hybrid cross-modality fusion network for medical image segmentation with contrastive learning," Engineering Applications of Artificial Intelligence, 144, 110073, 2025. [[Paper]](https://www.sciencedirect.com/science/article/pii/S0952197625000739) 
-
-- M. Ashraf, **L. Chen**, N. Innab, M. Umer, J. Baili, T. Kim, and I. Ashraf, "Novel 3D Deep Neural Network Architecture for Crop Classification Using Remote Sensing-Based Hyperspectral Images," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2024. [[Paper]](https://doi.org/10.1109/JSTARS.2024.3422078) 
-
-- A. Mahmood, **L. Chen**, X. Zhou, and M. AR., "A Joint Architecture of Mixed-Attention Transformer and Octave Module for Hyperspectral Image Denoising," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2024. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10410657) 
+- X. Su, X. Shen, H. Liu, **Chen, L.**, G. Vivone, & X. Zhou, "Toward model-independent separative training for deep hyperspectral anomaly detection with mask guidance," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11039663)
 
 - X. Zhou, F. Liang, **L. Chen***, H. Liu, J. Nie, and J. Xie, "MeSAM: Multiscale Enhanced Segment Anything Model for Optical Remote Sensing Images," IEEE Transactions on Geoscience and Remote Sensing, doi:10.1109/TGRS.2024.3398038, 2024. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10522788) [[Codes]](https://github.com/Magic-lem/MeSAM)
 
@@ -71,9 +67,15 @@ Assistant researcher at Chongqing University. I received my Bachelor's degree in
 
 - **L. Chen**, Z. Lai, G. Vivone, G. Jeon, J. Chanussot, and X. Yang, "ArbRPN: A Bidirectional Recurrent Pansharpening Network for Multispectral Images with Arbitrary Numbers of Bands," IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1–18, 2022. [[Paper]](https://doi.org/10.1109/TGRS.2021.3131228) [[Codes]](https://github.com/Lihui-Chen/ArbRPN)
 
-- J. Qin, **L. Chen**, S. Jeon, and X. Yang, "Progressive Interaction-learning Network for Lightweight Single-Image Super-Resolution in Industrial Applications," IEEE Transactions on Industrial Informatics, 2022. [[Paper]](https://doi.org/10.1109/TII.2022.3190350) 
-
 - **L. Chen**, G. Vivone, J. Qin, J. Chanussot, and X. Yang, "Spectral-spatial Transformer for Hyperspectral Image Sharpening," IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2022. (Oral) [[Paper]](https://doi.org/10.1109/IGARSS46834.2022.9884194) [[Codes]](https://github.com/Lihui-Chen/Spectral-Spatial-Transformer-for-HSI-Sharpening)
+
+- J. Qin, **L. Chen**, S. Jeon, and X. Yang, "Progressive Interaction-learning Network for Lightweight Single-Image Super-Resolution in Industrial Applications," IEEE Transactions on Industrial Informatics, 2022. [[Paper]](https://doi.org/10.1109/TII.2022.3190350)
+
+- X. Zhou, Q. Song, J. Nie, Y. Feng, H. Liu, F. Liang, **Chen, L.**, & J. Xie, "Hybrid cross-modality fusion network for medical image segmentation with contrastive learning," Engineering Applications of Artificial Intelligence, 144, 110073, 2025. [[Paper]](https://www.sciencedirect.com/science/article/pii/S0952197625000739)
+
+- M. Ashraf, **L. Chen**, N. Innab, M. Umer, J. Baili, T. Kim, and I. Ashraf, "Novel 3D Deep Neural Network Architecture for Crop Classification Using Remote Sensing-Based Hyperspectral Images," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2024. [[Paper]](https://doi.org/10.1109/JSTARS.2024.3422078)
+
+- A. Mahmood, **L. Chen**, X. Zhou, and M. AR., "A Joint Architecture of Mixed-Attention Transformer and Octave Module for Hyperspectral Image Denoising," IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2024. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10410657)
 
 - **L. Chen**, R. Tang, M. Anisetti, and X. Yang, "A lightweight iterative error reconstruction network for infrared image super-resolution in smart grid," Sustainable Cities and Society, vol. 66, 2020. [[Paper]](https://doi.org/10.1016/j.scs.2020.102520) [[Codes]](https://github.com/Lihui-Chen/IERN-for-IR-Image-SR)
 
